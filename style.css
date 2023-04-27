@@ -1,0 +1,241 @@
+/* ----- CSS RESET -------- */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Plus Jakarta Sans', sans-serif;
+}
+
+
+/* ----VARIABLES ----------- */
+
+:root{
+    --primary-color:#f74780;
+    --light-blue:#666ca3;
+    --dark-blue:#13183f;
+    --gray-color:#83869a;
+    --pink-color:#ffa7c3;
+    --white-color:#ffffff;
+}
+
+
+/* -----HEADER SECIION ------ */
+
+.container{
+    width:85%;
+    margin:auto;
+    position:relative;
+}
+
+
+header{
+    width:100%;
+    height:100vh;
+}
+
+
+.hero-img{
+   max-width:80%;
+   position:absolute;
+   top:-14%;
+   right:-34%;
+   z-index:-1;
+  
+   
+}
+
+nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:2% 8%;
+}
+
+
+nav a{
+    padding:13px 30px;
+    background:var(--dark-blue);
+    color:var(--white-color);
+    font-size:17px;
+    font-weight:700;
+    border-radius:25px;
+    text-decoration:none;
+    transition:background .3s;
+    cursor:pointer;
+}
+
+nav a:hover{
+  background:var(--light-blue)
+}
+
+
+.welcome-section{
+    width:100%;
+    margin-top:10%;
+    padding:0 8%;
+}
+
+.welcome-section h1{
+    font-size:56px;
+    line-height:70px;
+    margin-bottom: 20px;
+}
+
+.welcome-section p{
+    font-size:18px;
+    line-height:28px;
+    margin-bottom: 20px;
+}
+
+.btn{
+    padding:13px 30px;
+    border-radius:25px;
+    background:linear-gradient(#f02aa6,#ff6f48);
+    outline:none;
+    border:none;
+    color:var(--white-color);
+    font-size:18px;
+    transition:.3s;
+    cursor:pointer;
+}
+
+.btn:hover{
+    background:var(--pink-color);
+}
+/* -----END OF HEADER SECIION ------ */
+
+
+
+/* ------ COURSES SECTION STYLING ---------------*/
+
+section{
+    padding:50px 0;
+}
+
+
+.courses{
+    margin-top:3%;
+}
+
+.course-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap:50px;
+    margin-bottom:50px;
+}
+
+
+.course-info-card{
+    width:320px;
+    height:320px;
+    box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+    padding:35px;
+    border-radius:15px;
+    position:relative;
+}
+
+.course-info-card:nth-child(1){
+    background:linear-gradient(to bottom,#f02aa6,#ff6f48);
+    
+}
+
+.course-info-card h2{
+    color:var(--white-color);
+    width:200px;
+    font-size:24px;
+    margin-top:50px;
+}
+
+.course-info-card h3{
+    font-size:24px;
+    line-height:30px;
+    margin:30px 0;
+}
+
+
+.course-info-card img{
+    position:absolute;
+    top:-25px;
+}
+
+.course-info-card p{
+    font-size:16px;
+    line-height:26px;
+    margin-bottom:20px;
+    color:var(--gray-color);
+}
+
+
+.course-info-card a{
+    text-decoration:none;
+    font-size:18px;
+    color:var(--primary-color);
+    font-weight:700;
+}
+
+/* ------END OF  COURSES SECTION STYLING ---------------*/
+
+
+/* ----FOOTER SECTION STYLING------ */
+footer{
+    padding:50px 0;
+    background:var(--dark-blue);
+
+}
+
+
+.footer-container{
+    width:85%;
+    margin:auto;
+}
+
+.footer-links{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.footer-links .btn{
+    text-decoration:none;
+    background:linear-gradient(#4851ff, #f02aa6);
+}
+
+
+
+
+/* ----END OF FOOTER SECTION STYLING------ */
+
+/* -------RESPONSIVENESS -------------------- */
+
+@media screen and (max-width:600px){
+    .container{
+        width:100%;
+    }
+
+    .welcome-section h1{
+        width:400px;
+        font-size:40px;
+        line-height:50px;
+        margin-top:2%;
+       
+    }
+
+    .hero-img{
+        display:none;
+    }
+
+    .welcome-section p{
+        font-size:13px;
+        margin-bottom:30px;
+    }
+
+    .course-time{
+        width:100%;
+        background-image:url('images/image-hero-mobile@2x.png');
+    }
+
+    .courses{
+        width:100%;
+        padding:20px;
+    }
+}
